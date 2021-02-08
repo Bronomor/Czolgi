@@ -32,7 +32,7 @@ public class World {
 
         grassField = new GrassField(mapParameters);
         Vector2d middle = new Vector2d(mapParameters.getMapWidth()/2,mapParameters.getMapHeight()/2);
-        player = new Player("Mistrzuniu strzela", grassField, middle,44);
+        player = new Player("Mistrzuniu strzela", grassField, middle,10);
         engine = new SimulationEngine(mapParameters.getBotCount(),mapParameters.getObstacleCount(),grassField, mapParameters,player);
     }
     public void start() {
