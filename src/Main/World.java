@@ -23,7 +23,7 @@ public class World {
    private final VBox mapLayout  = new VBox();
    private final VBox menuLayout = new VBox();
    private final Player player;
-   private final Stage window = new Stage();
+   private final Stage window   = new Stage();
 
     public World(MapParameters mapParameters){
         int width = (WINDOW_WIDTH-200) / mapParameters.getMapWidth();
@@ -37,9 +37,8 @@ public class World {
     }
     public void start() {
         try {
-            menuLayout.setMaxWidth(200);
-            HBox hBox = new HBox(mapLayout,menuLayout);
-            hBox.setPrefWidth(800);
+
+            HBox hBox   = new HBox(mapLayout,menuLayout);
             Scene scene = new Scene(hBox,WINDOW_WIDTH,WINDOW_HEIGHT);
 
             window.setTitle("Fight arena");
@@ -88,7 +87,6 @@ public class World {
             menuStart.start(new Stage());
             GameOverWindow gameOverWindow = new GameOverWindow();
             gameOverWindow.start(player);
-
         }
     }
 
